@@ -4,13 +4,13 @@ function checkPostgreSQLReady() {
 
   function handleReturn(error, stdout) {
     if (stdout.search("accepting connections") === -1) {
-      process.stdout.write(".")
+      process.stdout.write(".");
       checkPostgreSQLReady();
       return;
     }
     process.stdout.write("\n🟢 PostgreSQL is ready!\n");
   }
-}  
+}
 process.stdout.write("\n\n🔴 Waiting for PostgreSQL to be ready");
 
 checkPostgreSQLReady();
