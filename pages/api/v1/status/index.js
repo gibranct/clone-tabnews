@@ -13,7 +13,7 @@ export default async function status(req, res) {
       database: {
         version: dbVersion[0].server_version,
         max_connections: parseInt(dbMaxConns[0].max_connections),
-        used_connections: dbUsedConns[0].count,
+        opened_connections: dbUsedConns[0].count,
       },
     },
   });
